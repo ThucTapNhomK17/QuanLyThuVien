@@ -1,0 +1,11 @@
+D:\nam3_2\Thực tập nhóm\qlthuvien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+D:\nam3_2\Thực tập nhóm\qlthuvien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
+D:\nam3_2\Thực tập nhóm\qlthuvien\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
+D:\nam3_2\Thực tập nhóm\qlthuvien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojAssemblyReference.cache
+D:\nam3_2\Thực tập nhóm\qlthuvien\QuanLyThuVien\obj\Debug\QuanLyThuVien.fLogin.resources
+D:\nam3_2\Thực tập nhóm\qlthuvien\QuanLyThuVien\obj\Debug\QuanLyThuVien.fTableManager.resources
+D:\nam3_2\Thực tập nhóm\qlthuvien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
+D:\nam3_2\Thực tập nhóm\qlthuvien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.cache
+D:\nam3_2\Thực tập nhóm\qlthuvien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CoreCompileInputs.cache
+D:\nam3_2\Thực tập nhóm\qlthuvien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+D:\nam3_2\Thực tập nhóm\qlthuvien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
