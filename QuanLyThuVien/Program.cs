@@ -11,6 +11,8 @@ namespace QuanLyThuVien
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// hello
+       
         [STAThread]
         static void Main()
         {
