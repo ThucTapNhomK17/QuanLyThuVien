@@ -34,6 +34,8 @@ namespace QuanLyThuVien
                 e.Cancel = true;
             }
         }
+        //private void butBack_Click(object sender, EventArgs e)
+        
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
