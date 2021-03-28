@@ -14,7 +14,7 @@ namespace QuanLyThuVien
     {
         public fTableManager()
         {
-            InitializeComponent();
+            InitializeComponent;
         }
     }
 }
