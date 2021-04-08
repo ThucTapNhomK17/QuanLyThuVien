@@ -112,7 +112,7 @@ namespace WindowsFormsApplication1
 
         private void thốngKêĐộcGiảToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
             Form f = new Formthongkedocgia();
             f.Show();
 
