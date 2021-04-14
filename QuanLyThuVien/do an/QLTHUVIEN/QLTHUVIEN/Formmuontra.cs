@@ -23,7 +23,6 @@ namespace WindowsFormsApplication1
         private void loaddata()
         {
             DataTable dt = t.docdulieu("select * from phieumuon");
-            //l.Text = dt.Rows.Count.ToString();
             loadcombo();
             if (dt != null)
             {
