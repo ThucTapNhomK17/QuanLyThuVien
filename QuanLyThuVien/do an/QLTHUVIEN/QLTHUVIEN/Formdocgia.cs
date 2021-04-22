@@ -52,7 +52,6 @@ namespace WindowsFormsApplication1
             xoa.Enabled = true;
             luu.Enabled = false;
             luoi.Enabled = true;
-
         }
 
         private void luoi_SelectionChanged(object sender, EventArgs e)
