@@ -11,7 +11,6 @@ namespace WindowsFormsApplication1
 {
     public partial class Formmuontra : Form
     {
-
         public DateTime date1, date2;
         public TimeSpan time;
         public int day;
