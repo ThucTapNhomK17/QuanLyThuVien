@@ -171,51 +171,51 @@ namespace WindowsFormsApplication1
 
             }
         }
-
-        private void sua_Click(object sender, EventArgs e)
-        {
-            if (sua.Text == "hủy")
+        //Update PhieuMuon
+            private void sua_Click(object sender, EventArgs e)
             {
-                luu.Enabled = false;
-                sua.Enabled = true;
-                xoa.Enabled = true;
-                xoa.Text = "Xóa";
-                sua.Text = "Sửa";
-                them.Enabled = true;
-                loaddata();
-                luoi.Enabled = true;
-            }
-            else
-            {
-
-                if (comdocgia.Text == "")
+                if (sua.Text == "hủy")
                 {
-                    MessageBox.Show("Chưa chọn mã độc giả");
-
-                }
-                else if (comnhanvien.Text == "")
-                {
-                    MessageBox.Show("Chưa nhập địa chỉ");
-               
-
-
-                }
-                else if (t.thucthidulieu("update  phieumuon set madg=N'" + comdocgia.Text + "', manv=N'" + comnhanvien.Text +  "'where maphieu=N'" + txtmaphieu.Text + "'") == true)
-                {
-
-                    MessageBox.Show("Cập nhật dữ liệu thành công");
+                    luu.Enabled = false;
+                    sua.Enabled = true;
+                    xoa.Enabled = true;
+                    xoa.Text = "Xóa";
+                    sua.Text = "Sửa";
+                    them.Enabled = true;
                     loaddata();
+                    luoi.Enabled = true;
+                }
+                else
+                {
+
+                    if (comdocgia.Text == "")
+                    {
+                        MessageBox.Show("Chưa chọn mã độc giả");
+
+                    }
+                    else if (comnhanvien.Text == "")
+                    {
+                        MessageBox.Show("Chưa nhập địa chỉ");
+
+
+
+                    }
+                    else if (t.thucthidulieu("update  phieumuon set madg=N'" + comdocgia.Text + "', manv=N'" + comnhanvien.Text +  "'where maphieu=N'" + txtmaphieu.Text + "'") == true)
+                    {
+
+                        MessageBox.Show("Cập nhật dữ liệu thành công");
+                        loaddata();
+
+
+                    }
+                    else MessageBox.Show("Không thể cập nhật dữ liệu");
 
 
                 }
-                else MessageBox.Show("Không thể cập nhật dữ liệu");
+
 
 
             }
-
-
-            
-        }
 
         private void xoa_Click(object sender, EventArgs e)
         {
