@@ -152,7 +152,7 @@ namespace Library_Manager
             string cmd = "";
             if (serial.Length > 0)
             {
-                cmd = string.Format("SELECT NAME FROM BOOK WHERE SERIAL = '{0}'", serial);
+                cmd = string.Format("SELECT NAME FROM BOOK WHERE ID_BOOK = '{0}'", serial);
                 return Utility.DATABASECONNECTION.Execute(cmd).Rows[0][0].ToString();
             }
             return null;
@@ -165,7 +165,7 @@ namespace Library_Manager
             {
                 try
                 {
-                    cmd = string.Format("SELECT QUANTUM FROM BOOK WHERE SERIAL = '{0}'", serial);
+                    cmd = string.Format("SELECT QUANTUM FROM BOOK WHERE ID_BOOK = '{0}'", serial);
                     return Utility.DATABASECONNECTION.Execute(cmd).Rows[0][0].ToString();
                 } catch
                 {
