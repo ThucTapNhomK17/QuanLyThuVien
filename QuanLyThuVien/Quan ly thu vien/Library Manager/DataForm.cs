@@ -220,13 +220,21 @@ namespace Library_Manager
 
                     }
                     break;
-                //case 3:
-                //    {
-                //        dgvAnalytics.AutoGenerateColumns = true;
-                //        dgvAnalytics.DataSource = Data.ViewAllBorrowCard();
 
-                //    }
-                //    break;
+                case 1:
+                    {
+                        dgvAnalytics.AutoGenerateColumns = true;
+                        dgvAnalytics.DataSource = Data.ViewAllBook();
+
+                    }
+                    break;
+                    //case 3:
+                    //    {
+                    //        dgvAnalytics.AutoGenerateColumns = true;
+                    //        dgvAnalytics.DataSource = Data.ViewAllBorrowCard();
+
+                    //    }
+                    //    break;
             }
 
         }

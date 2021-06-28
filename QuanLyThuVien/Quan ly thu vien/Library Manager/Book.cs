@@ -64,11 +64,21 @@ namespace Library_Manager
         public static bool insertBook(string id, string name, string tacgia, string nxb, string loai, int sl)
         {
             string cmd = string.Format("SELECT ID_BOOK FROM BOOK WHERE ID_BOOK = '{0}'", id);
-                    SqlCommand sqlCommand;
-                    cmd = string.Format("EXEC PROC_INSERT_BOOK " +
-                                        "'{0}', N'{1}', N'{2}',N'{3}',N'{4}','{5}'", id, name, tacgia, nxb, loai, sl);
-                    sqlCommand = new SqlCommand(cmd, Utility.DATABASECONNECTION.sqlConn);
-                    sqlCommand.ExecuteNonQuery();
+            try
+            {
+                SqlCommand sqlCommand;
+                cmd = string.Format("EXEC PROC_INSERT_BOOK " +
+                                    "'{0}', N'{1}', N'{2}',N'{3}',N'{4}','{5}'", id, name, tacgia, nxb, loai, sl);
+                sqlCommand = new SqlCommand(cmd, Utility.DATABASECONNECTION.sqlConn);
+                sqlCommand.ExecuteNonQuery();
+            }
+
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
+
             return true;
         }
 
@@ -76,33 +86,29 @@ namespace Library_Manager
         {
             string cmd = string.Format("SELECT SERIAL FROM BOOK WHERE ID_BOOK = '{0}'", id);
             int rowsCount = Utility.DATABASECONNECTION.Execute(cmd).Rows.Count;
-            //if (rowsCount == 0)
-            //{
-            //    return false;
-            //}
-            //else
-            //{
-            //    try
-            //    {
-                    //Image image = Utility.FixedSize(Image.FromFile(imageLoc), 200, 200);
-
-                    //byte[] img = Utility.ImageToByteArray(image);
-
+            if (rowsCount == 0)
+            {
+                return false;
+            }
+            else
+            {
+                try
+                {
                     SqlCommand sqlCommand;
                     cmd = string.Format("EXEC PROC_UPDATE_BOOK " +
                                         "'{0}', N'{1}', N'{2}',N'{3}',N'{4}','{5}' ", id, name, tacgia, nxb, loai, sl);
                     sqlCommand = new SqlCommand(cmd, Utility.DATABASECONNECTION.sqlConn);
-                    //sqlCommand.Parameters.Add("@img", img);
                     sqlCommand.ExecuteNonQuery();
-            //    }
-            //    catch (Exception e)
-            //    {
-            //        Console.WriteLine(e.Message);
-            //        return false;
-            //    }
-            //}
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    return false;
+                }
+            }
             return true;
         }
+
 
         public static bool updateBook(string serial, string name, string author, string ph, int quantum, byte[] img, string tag)
         {

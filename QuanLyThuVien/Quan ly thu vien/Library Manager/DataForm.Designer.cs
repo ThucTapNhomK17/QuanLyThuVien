@@ -114,7 +114,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
             this.barDockControlTop.Size = new System.Drawing.Size(1132, 0);
             // 
             // barDockControlBottom
@@ -123,7 +123,7 @@
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 653);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4);
             this.barDockControlBottom.Size = new System.Drawing.Size(1132, 0);
             // 
             // barDockControlLeft
@@ -132,7 +132,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4);
             this.barDockControlLeft.Size = new System.Drawing.Size(0, 653);
             // 
             // barDockControlRight
@@ -141,7 +141,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1132, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 653);
             // 
             // barLargeButtonItem1
@@ -557,8 +557,9 @@
             this.cbxAnalytics.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxAnalytics.FormattingEnabled = true;
             this.cbxAnalytics.Items.AddRange(new object[] {
-            "Xem toàn bộ sinh viên"});
-            this.cbxAnalytics.Location = new System.Drawing.Point(30, 150);
+            "Xem toàn bộ sinh viên",
+            "Xem toàn bộ sách"});
+            this.cbxAnalytics.Location = new System.Drawing.Point(26, 150);
             this.cbxAnalytics.Name = "cbxAnalytics";
             this.cbxAnalytics.Size = new System.Drawing.Size(300, 27);
             this.cbxAnalytics.TabIndex = 60;
@@ -571,14 +572,14 @@
             this.dgvAnalytics.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAnalytics.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvAnalytics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAnalytics.Location = new System.Drawing.Point(387, 150);
+            this.dgvAnalytics.Location = new System.Drawing.Point(370, 150);
             this.dgvAnalytics.Name = "dgvAnalytics";
             this.dgvAnalytics.ReadOnly = true;
             this.dgvAnalytics.RowHeadersWidth = 51;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAnalytics.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAnalytics.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAnalytics.Size = new System.Drawing.Size(1200, 510);
+            this.dgvAnalytics.Size = new System.Drawing.Size(988, 354);
             this.dgvAnalytics.TabIndex = 65;
             // 
             // DataForm
@@ -608,7 +609,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("DataForm.IconOptions.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "DataForm";
             this.Text = "Thao tác với dữ liệu hệ thống";
