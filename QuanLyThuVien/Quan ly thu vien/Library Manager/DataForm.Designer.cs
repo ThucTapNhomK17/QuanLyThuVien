@@ -558,7 +558,8 @@
             this.cbxAnalytics.FormattingEnabled = true;
             this.cbxAnalytics.Items.AddRange(new object[] {
             "Xem toàn bộ sinh viên",
-            "Xem toàn bộ sách"});
+            "Xem toàn bộ sách",
+            "Xem toàn bộ phiếu mượn"});
             this.cbxAnalytics.Location = new System.Drawing.Point(26, 150);
             this.cbxAnalytics.Name = "cbxAnalytics";
             this.cbxAnalytics.Size = new System.Drawing.Size(300, 27);
@@ -572,14 +573,14 @@
             this.dgvAnalytics.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAnalytics.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvAnalytics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAnalytics.Location = new System.Drawing.Point(370, 150);
+            this.dgvAnalytics.Location = new System.Drawing.Point(376, 150);
             this.dgvAnalytics.Name = "dgvAnalytics";
             this.dgvAnalytics.ReadOnly = true;
             this.dgvAnalytics.RowHeadersWidth = 51;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAnalytics.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAnalytics.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAnalytics.Size = new System.Drawing.Size(988, 354);
+            this.dgvAnalytics.Size = new System.Drawing.Size(744, 354);
             this.dgvAnalytics.TabIndex = 65;
             // 
             // DataForm

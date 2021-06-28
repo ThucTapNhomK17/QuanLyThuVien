@@ -82,11 +82,11 @@ namespace Library_Manager
 
         }
         //public static bool insertBorrow(string id, string serial, int quantum, DateTime timecreate, int borrowTime, string comment)
-        public static bool insertBorrow(string idbor, string idcard, string idbook, int quan, string time, string note)
+        public static bool insertBorrow(string idbor, string idcard, string manv,string idbook, int quan, string time, string note)
         {
                 SqlCommand sqlCommand;
                 string cmd = string.Format("EXEC PROC_INSERT_BORROW_DETAIL " +
-                                        "'{0}', '{1}','{2}','{3}','{4}','{5}'", idbor, idcard, idbook, quan, time, note);
+                                        "'{0}', '{1}','{2}','{3}','{4}','{5}','{6}'", idbor, idcard,manv, idbook, quan, time, note);
                 //Utility.DATABASECONNECTION.ExecuteNonQuery(cmd);
                 sqlCommand = new SqlCommand(cmd, Utility.DATABASECONNECTION.sqlConn);
                 sqlCommand.ExecuteNonQuery();

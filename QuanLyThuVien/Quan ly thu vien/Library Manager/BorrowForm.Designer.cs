@@ -141,7 +141,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
             this.barDockControlTop.Size = new System.Drawing.Size(1132, 0);
             // 
             // barDockControlBottom
@@ -150,7 +150,7 @@
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 653);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4);
             this.barDockControlBottom.Size = new System.Drawing.Size(1132, 0);
             // 
             // barDockControlLeft
@@ -159,7 +159,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4);
             this.barDockControlLeft.Size = new System.Drawing.Size(0, 653);
             // 
             // barDockControlRight
@@ -168,7 +168,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1132, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 653);
             // 
             // barLargeButtonItem1
@@ -492,9 +492,10 @@
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(778, 131);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 25);
+            this.label2.Size = new System.Drawing.Size(160, 25);
             this.label2.TabIndex = 49;
-            this.label2.Text = "SÁCH MƯỢN";
+            this.label2.Text = "PHIẾU MƯỢN";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtIdBorrow
             // 
@@ -535,6 +536,7 @@
             this.dtgvCart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvCart.Size = new System.Drawing.Size(528, 370);
             this.dtgvCart.TabIndex = 52;
+            this.dtgvCart.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvCart_CellContentClick);
             // 
             // btnAdd
             // 
@@ -610,9 +612,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(11, 332);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 19);
+            this.label6.Size = new System.Drawing.Size(81, 19);
             this.label6.TabIndex = 59;
-            this.label6.Text = "Thời gian mượn";
+            this.label6.Text = "Ngày mượn";
             // 
             // btnCancel
             // 
@@ -696,7 +698,7 @@
             // colSerial
             // 
             this.colSerial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colSerial.HeaderText = "Mã sách";
+            this.colSerial.HeaderText = "mã sách";
             this.colSerial.MinimumWidth = 6;
             this.colSerial.Name = "colSerial";
             this.colSerial.ReadOnly = true;
@@ -706,7 +708,7 @@
             // 
             this.colNameOfBook.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.colNameOfBook.FillWeight = 350F;
-            this.colNameOfBook.HeaderText = "Tên sách";
+            this.colNameOfBook.HeaderText = "tên sách";
             this.colNameOfBook.MinimumWidth = 6;
             this.colNameOfBook.Name = "colNameOfBook";
             this.colNameOfBook.ReadOnly = true;
@@ -716,7 +718,7 @@
             // colAmount
             // 
             this.colAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colAmount.HeaderText = "Số lượng";
+            this.colAmount.HeaderText = "số lượng";
             this.colAmount.MinimumWidth = 6;
             this.colAmount.Name = "colAmount";
             this.colAmount.ReadOnly = true;
@@ -728,17 +730,17 @@
             this.colmasv.HeaderText = "mã sv";
             this.colmasv.Name = "colmasv";
             this.colmasv.ReadOnly = true;
-            this.colmasv.Width = 49;
             // 
             // colmathe
             // 
             this.colmathe.HeaderText = "mã thẻ";
             this.colmathe.Name = "colmathe";
             this.colmathe.ReadOnly = true;
+            this.colmathe.Width = 55;
             // 
             // coltgian
             // 
-            this.coltgian.HeaderText = "Số ngày mượn";
+            this.coltgian.HeaderText = "ngày mượn";
             this.coltgian.Name = "coltgian";
             this.coltgian.ReadOnly = true;
             // 
@@ -779,7 +781,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("BorrowForm.IconOptions.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "BorrowForm";
             this.Text = "Thao tác với thẻ mượn sách";

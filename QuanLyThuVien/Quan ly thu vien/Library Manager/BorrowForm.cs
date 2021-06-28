@@ -185,36 +185,35 @@ namespace Library_Manager
                         try
                         {
                             table = Borrow.findBorrowByIdStudent(txtIdStudent.Text);
-                        foreach (DataRow row in table.Rows)
-                        {
-                            if (!txtIdBook.Text.Contains(row[3].ToString()))
-                                txtIdBorrow.Text += row[0].ToString() + ", ";
-                            dtgvCart.Rows.Add(row[3], Book.getBookNameBySerial(row[3].ToString()), row[3].ToString(), row[1], row[1], row[1]);
+                            foreach (DataRow row in table.Rows)
+                            {
+                                if (!txtIdBook.Text.Contains(row[2].ToString()))
+                                    txtIdBorrow.Text += row[0].ToString() + ", ";
+                                dtgvCart.Rows.Add(row[2], Book.getBookNameBySerial(row[2].ToString()), row[3].ToString(), row[4], row[0], row[5]);
 
-                        }
-                        //txtIdStudent.Text = table.Rows[0][0].ToString();
-                        xóaToolStripMenuItem.Enabled = tsbtnDelMode.Enabled = true;
+                            }
+                            //txtIdStudent.Text = table.Rows[0][0].ToString();
+                            xóaToolStripMenuItem.Enabled = tsbtnDelMode.Enabled = true;
                         }
                         catch (Exception ex)
                         {
                             clear();
                             MessageBox.Show("Không tìm thấy sinh viên\nLỗi : " + ex.Message, "Thất bại!");
                         }
-                        //MessageBox.Show("Không tìm thấy thẻ mượn sách của sinh viên", "Thất bại!");
                     }
                     else
                     {
                         try
                         {
                             dtgvCart.Rows.Clear();
-                        table = Borrow.findBorrowById(txtIdBorrow.Text);
-                        txtIdStudent.Text = table.Rows[0][0].ToString();
-                        foreach (DataRow row in table.Rows)
-                        {
-                            dtgvCart.Rows.Add(row[0].ToString(), Book.getBookNameBySerial(row[0].ToString()), row[2].ToString(), row[1], row[1], row[1]);
-                        }
-                        //edit here             
-                        xóaToolStripMenuItem.Enabled = tsbtnDelMode.Enabled = true;
+                            table = Borrow.findBorrowById(txtIdBorrow.Text);
+                            txtIdStudent.Text = table.Rows[0][0].ToString();
+                            foreach (DataRow row in table.Rows)
+                            {
+                                dtgvCart.Rows.Add(row[2], Book.getBookNameBySerial(row[2].ToString()), row[3].ToString(), row[4], row[0], row[5]);
+                            }
+                            //edit here             
+                            xóaToolStripMenuItem.Enabled = tsbtnDelMode.Enabled = true;
                         }
                         catch (Exception ex)
                         {
@@ -238,10 +237,10 @@ namespace Library_Manager
                             //txtComment.Text = "";
                             //txtborrow.Text = "1";
                             //lblQuantum.Text = "0";
-                            Borrow.insertBorrow(txtIdBorrow.Text, txtIdStudent.Text, txtIdBook.Text, (int)txtAmount.Value, txtborrow.Text, txtComment.Text);
+                            Borrow.insertBorrow(txtIdBorrow.Text, txtIdBorrow.Text, txtIdStudent.Text, txtIdBook.Text, (int)txtAmount.Value, txtborrow.Text, txtComment.Text);
                             dtgvCart.Rows.Clear();
                             MessageBox.Show("Tạo thành công thẻ mượn sách cho sinh viên : " + txtIdStudent.Text + "\nMã thẻ mượn : " + txtIdBorrow.Text, "Thông báo");
-                        //cbxBorrowtime.SelectedIndex = -1;
+                            //cbxBorrowtime.SelectedIndex = -1;
                         }
                         catch (Exception ex)
                         {
@@ -388,6 +387,16 @@ namespace Library_Manager
                     form.Close();
                     break;
                 }
+        }
+
+        private void dtgvCart_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
