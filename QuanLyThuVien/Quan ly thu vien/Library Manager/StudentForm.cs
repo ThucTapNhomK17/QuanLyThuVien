@@ -242,9 +242,9 @@ namespace Library_Manager
                         }
                     }
                    
-                    #endregion TÌM
                     setAutoComplete();
                     break;
+                #endregion TÌM
                 case "Thêm":
                     #region THÊM
                     if (!IsValidEmail(txtEmail.Text))
@@ -252,20 +252,17 @@ namespace Library_Manager
                         MessageBox.Show("Email bạn đã nhập chưa hợp lệ!", "Thông báo ");
                         break;
                     }
-                    if ((txtEmail.TextLength * txtName.TextLength * txtPhone.TextLength * txtId.TextLength * imgLogcation.Length) == 0)
-                    {
-                        MessageBox.Show("Bạn cần điền đầy đủ thông tin cho sinh viên", "Lỗi", MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    }
+
                     else
-                        if (Student.insertStudent(txtId.Text, txtName.Text, txtPhone.Text, txtEmail.Text, imgLogcation))
-                            MessageBox.Show("Thêm sinh viên thành công!", "Thành công");
-                        else
-                            MessageBox.Show("Thêm sinh viên thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    #endregion THÊM
+                        Student.insertStudent(txtId.Text, txtName.Text, txtPhone.Text, txtEmail.Text);
+                        MessageBox.Show("Thêm sinh viên thành công!", "Thành công");
+
                     setAutoComplete();
                     clear();
                     break;
+                #endregion THÊM
                 case "Xóa":
+                    #region Xóa
                     if (MessageBox.Show("Bạn có chắc muốn xóa sinh viên?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
                         if (Student.deleteStudent(txtId.Text))
@@ -277,6 +274,7 @@ namespace Library_Manager
                     }
                     setAutoComplete();
                     break;
+                #endregion Xóa
                 case "Sửa":
                     #region SỬA
                     if(!IsValidEmail(txtEmail.Text))
@@ -286,22 +284,10 @@ namespace Library_Manager
                     }
                     if (MessageBox.Show("Bạn có chắc muốn sửa thông tin của sinh viên?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
-                        if ((txtEmail.TextLength * txtName.TextLength * txtPhone.TextLength * txtId.TextLength) == 0 || (imgLogcation.Length == 0 && table.Rows[0][4] == DBNull.Value))
-                        {
-                            MessageBox.Show("Bạn cần điền đầy đủ thông tin cho sinh viên", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            if (!Student.updateStudent(txtId.Text, txtName.Text, txtPhone.Text, txtEmail.Text, imgLogcation))
-                                if (!Student.updateStudent(txtId.Text, txtName.Text, txtPhone.Text, txtEmail.Text, (byte[])table.Rows[0][4]))
-                                {
-                                    MessageBox.Show("Sửa sinh viên thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    break;
-                                }
+                            Student.updateStudent(txtId.Text, txtName.Text, txtPhone.Text, txtEmail.Text);
                             MessageBox.Show("Sửa sinh viên thành công!", "Thành công");
 
-                        }
-                    }
+                        }  
                     setAutoComplete();
                     break;
                     #endregion SỬA

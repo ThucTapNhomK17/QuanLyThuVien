@@ -41,64 +41,31 @@ namespace Library_Manager
             return null;
         }
 
-        public static bool insertStudent(string id, string name, string phone, string email, string imageLoc)
+        public static bool insertStudent(string id, string name, string phone, string email)
         {
             string cmd = string.Format("SELECT ID FROM STUDENT WHERE ID = '{0}'", id);
-            if (Utility.DATABASECONNECTION.Execute(cmd).Rows.Count > 0)
-            {
-                return false;
-            }
-            else
-            {
-                try
-                {
-                    Image image = Utility.FixedSize(Image.FromFile(imageLoc), 200, 200);
-
-                    byte[] img = Utility.ImageToByteArray(image);
                     SqlCommand sqlCommand;
                     cmd = string.Format("EXEC PROC_INSERT_STUDENT " +
-                                        "'{0}', N'{1}', '{2}', '{3}', @img", id, name, phone, email);
+                                        "'{0}', N'{1}', '{2}', '{3}'", id, name, phone, email);
                     sqlCommand = new SqlCommand(cmd, Utility.DATABASECONNECTION.sqlConn);
-                    sqlCommand.Parameters.Add("@img", img);
                     sqlCommand.ExecuteNonQuery();
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }
             return true;
         }
 
-        public static bool updateStudent(string id, string name, string phone, string email, string imageLoc)
+        public static bool updateStudent(string id, string name, string phone, string email)
         {
             string cmd = string.Format("SELECT ID FROM STUDENT WHERE ID = '{0}'", id);
-            if (Utility.DATABASECONNECTION.Execute(cmd).Rows.Count == 0)
-            {
-                return false;
-            }
-            else
-            {
-                try
-                {
-                    Image image = Utility.FixedSize(Image.FromFile(imageLoc), 200, 200);
 
-                    byte[] img = Utility.ImageToByteArray(image);
+
                     SqlCommand sqlCommand;
                     cmd = string.Format("EXEC PROC_UPDATE_STUDENT " +
-                                        "'{0}', N'{1}', '{2}', '{3}', @img", id, name, phone, email);
+                                        "'{0}', N'{1}', '{2}', '{3}'", id, name, phone, email);
                     sqlCommand = new SqlCommand(cmd, Utility.DATABASECONNECTION.sqlConn);
-                    sqlCommand.Parameters.Add("@img", img);
                     sqlCommand.ExecuteNonQuery();
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                    return false;
-                }
-            }
+
             return true;
         }
+
         public static bool updateStudent(string id, string name, string phone, string email, byte[] img)
         {
             string cmd = string.Format("SELECT ID FROM STUDENT WHERE ID = '{0}'", id);

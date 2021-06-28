@@ -198,11 +198,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Res\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="IconLibrary.ico" />
+    <Content Include="Res\pic\africa-african-animal-33045.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

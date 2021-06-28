@@ -81,16 +81,17 @@ namespace Library_Manager
             }
 
         }
-        public static bool insertBorrow(string id, string serial, int quantum, DateTime timecreate, int borrowTime, string comment)
+        //public static bool insertBorrow(string id, string serial, int quantum, DateTime timecreate, int borrowTime, string comment)
+        public static bool insertBorrow(string id, string idbook)
         {
             try
             {
                 SqlCommand sqlCommand;
                 string cmd = string.Format("EXEC PROC_INSERT_BORROW_DETAIL " +
-                                        "{0}, '{1}', '{2}', @time, '{3}', N'{4}'", id, serial, quantum, borrowTime, comment);
+                                        "{0}, '{1}'", id, idbook);
                 //Utility.DATABASECONNECTION.ExecuteNonQuery(cmd);
                 sqlCommand = new SqlCommand(cmd, Utility.DATABASECONNECTION.sqlConn);
-                sqlCommand.Parameters.Add("@time", timecreate);
+                //sqlCommand.Parameters.Add("@time", timecreate);
                 sqlCommand.ExecuteNonQuery();
             }
             catch (Exception e)

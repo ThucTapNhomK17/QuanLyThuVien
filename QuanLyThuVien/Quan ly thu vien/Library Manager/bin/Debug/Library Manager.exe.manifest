@@ -1963,14 +1963,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Library Manager.exe" size="1343488">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Library Manager.exe" size="1339904">
       <assemblyIdentity name="Library Manager" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WTgTDLPY0fwKtDec3/sb7AYn4OJSXpszEskkTK+jF7M=</dsig:DigestValue>
+        <dsig:DigestValue>TZxtKS+j2jq+M78hW5nzE0fho7AUreHApTuJW9OBgC4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1990,6 +1990,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>tbqGeZzgKj56difgV/FI/YJAAGF7arZW4S6I/lfjVSA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Res\pic\africa-african-animal-33045.jpg" size="2344610">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>gebtVXbgGGMSvBRXxuET7wP33ZSzCyM1wxkWQbmDudo=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

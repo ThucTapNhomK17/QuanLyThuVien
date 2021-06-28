@@ -180,8 +180,8 @@ namespace Library_Manager
                     if (rbtnFindbyIdStudent.Checked)
                     {
                         dtgvCart.Rows.Clear();
-                        try
-                        {
+                        //try
+                        //{
                             table = Borrow.findBorrowByIdStudent(txtIdStudent.Text);
                             foreach (DataRow row in table.Rows)
                             {
@@ -192,18 +192,18 @@ namespace Library_Manager
                             }
                             //txtIdStudent.Text = table.Rows[0][0].ToString();
                             xóaToolStripMenuItem.Enabled = tsbtnDelMode.Enabled = true;
-                        }
-                        catch (Exception ex)
-                        {
-                            clear();
-                            MessageBox.Show("Không tìm thấy sinh viên\nLỗi : " + ex.Message, "Thất bại!");
-                        }
+                        //}
+                        //catch (Exception ex)
+                        //{
+                        //    clear();
+                        //    MessageBox.Show("Không tìm thấy sinh viên\nLỗi : " + ex.Message, "Thất bại!");
+                        //}
                         //MessageBox.Show("Không tìm thấy thẻ mượn sách của sinh viên", "Thất bại!");
                     }
                     else
                     {
-                        try
-                        {
+                        //try
+                        //{
                             dtgvCart.Rows.Clear();
                             table = Borrow.findBorrowById(txtIdBorrow.Text);
                             txtIdStudent.Text = table.Rows[0][0].ToString();
@@ -213,12 +213,12 @@ namespace Library_Manager
                             }
                             //edit here             
                             xóaToolStripMenuItem.Enabled = tsbtnDelMode.Enabled = true;
-                        }
-                        catch (Exception ex)
-                        {
-                            clear();
-                            MessageBox.Show("Không tìm thấy thẻ mượn sách của sinh viên\nLỗi : " + ex.Message, "Thất bại!");
-                        }
+                        //}
+                        //catch (Exception ex)
+                        //{
+                        //    clear();
+                        //    MessageBox.Show("Không tìm thấy thẻ mượn sách của sinh viên\nLỗi : " + ex.Message, "Thất bại!");
+                        //}
                     }
                     #endregion TÌM
                     break;
@@ -226,22 +226,23 @@ namespace Library_Manager
                     #region THÊM
                     {
                         //
-                        if (txtAmount.Value * txtIdStudent.TextLength * dtgvCart.Rows.Count * cbxBorrowtime.Text.Length == 0)
-                        {
-                            MessageBox.Show("Bạn chưa điền đủ thông tin!", "Thông báo");
-                        }
-                        else
-                        {
-                            if (Borrow.numOfBorrowCard(txtIdStudent.Text) < 5)
-                            {
-                                if (Borrow.insertBorrow(txtIdStudent.Text) > 0)
+                        //if (txtAmount.Value * txtIdStudent.TextLength * dtgvCart.Rows.Count * cbxBorrowtime.Text.Length == 0)
+                        //{
+                        //    MessageBox.Show("Bạn chưa điền đủ thông tin!", "Thông báo");
+                        //}
+                        //else
+                        //{
+                            //if (Borrow.numOfBorrowCard(txtIdStudent.Text) < 5)
+                            //{
+                                //if (Borrow.insertBorrow(txtIdStudent.Text) > 0)
                                     try
                                     {
                                         txtIdBorrow.Text = (Borrow.getId()).ToString();
                                         foreach (DataGridViewRow row in dtgvCart.Rows)
                                         {
-                                            Borrow.insertBorrow(txtIdBorrow.Text, row.Cells[0].Value.ToString(), int.Parse(row.Cells[2].Value.ToString()), DateTime.Now, cbxBorrowtime.GetItemText(cbxBorrowtime.SelectedItem)[0] - '0', txtComment.Text);
-                                        }
+                                        Borrow.insertBorrow(txtIdBorrow.Text, txtIdBook.Text);
+                                        //Borrow.insertBorrow(txtIdBorrow.Text, row.Cells[0].Value.ToString(), int.Parse(row.Cells[2].Value.ToString()), DateTime.Now, cbxBorrowtime.GetItemText(cbxBorrowtime.SelectedItem)[0] - '0', txtComment.Text);
+                                    }
                                         txtIdBook.Text = "";
                                         txtAmount.Value = 1;
                                         txtComment.Text = "";
@@ -255,12 +256,12 @@ namespace Library_Manager
                                         MessageBox.Show("Không thể tạo\nLỗi : " + ex.Message, "Thông báo");
                                         break;
                                     }
-                            }
-                            else
-                            {
-                                MessageBox.Show("Bạn đã đạt giới hạn 5 phiếu mượn sách", "Thông báo");
-                            }
-                        }
+                            //}
+                            //else
+                            //{
+                            //    MessageBox.Show("Bạn đã đạt giới hạn 5 phiếu mượn sách", "Thông báo");
+                            //}
+                        //}
                         setAutoComplete();
                     }
                     #endregion THÊM
@@ -344,26 +345,26 @@ namespace Library_Manager
         {
             if (Book.haveBook(txtIdBook.Text))
             {
-                foreach (DataGridViewRow dataGridViewRow in dtgvCart.Rows)
-                {
-                    if (dataGridViewRow.Cells[0].Value.ToString().Equals(txtIdBook.Text))
-                    {
-                        if (int.Parse(dataGridViewRow.Cells[2].Value.ToString()) + int.Parse(txtAmount.Value.ToString()) > int.Parse(Book.getBookQuantumBySerial(txtIdBook.Text)))
-                        {
-                            MessageBox.Show("Số lượng sách bạn mượn vượt quá số sách còn trong thư viện!", "Thông báo!");
-                        }
-                        else
-                        {
-                            dataGridViewRow.Cells[2].Value = int.Parse(dataGridViewRow.Cells[2].Value.ToString()) + int.Parse(txtAmount.Value.ToString());
-                        }
-                        return;
-                    }
-                }
-                if(int.Parse(txtAmount.Value.ToString()) > int.Parse(Book.getBookQuantumBySerial(txtIdBook.Text)))
-                {
-                    MessageBox.Show("Số lượng sách bạn mượn vượt quá số sách còn trong thư viện!", "Thông báo!");
-                    return;
-                }
+                //foreach (DataGridViewRow dataGridViewRow in dtgvCart.Rows)
+                //{
+                //    if (dataGridViewRow.Cells[0].Value.ToString().Equals(txtIdBook.Text))
+                //    {
+                //        if (int.Parse(dataGridViewRow.Cells[2].Value.ToString()) + int.Parse(txtAmount.Value.ToString()) > int.Parse(Book.getBookQuantumBySerial(txtIdBook.Text)))
+                //        {
+                //            MessageBox.Show("Số lượng sách bạn mượn vượt quá số sách còn trong thư viện!", "Thông báo!");
+                //        }
+                //        else
+                //        {
+                //            dataGridViewRow.Cells[2].Value = int.Parse(dataGridViewRow.Cells[2].Value.ToString()) + int.Parse(txtAmount.Value.ToString());
+                //        }
+                //        return;
+                //    }
+                //}
+                //if(int.Parse(txtAmount.Value.ToString()) > int.Parse(Book.getBookQuantumBySerial(txtIdBook.Text)))
+                //{
+                //    MessageBox.Show("Số lượng sách bạn mượn vượt quá số sách còn trong thư viện!", "Thông báo!");
+                //    return;
+                //}
                 dtgvCart.Rows.Add(txtIdBook.Text, Book.getBookNameBySerial(txtIdBook.Text), txtAmount.Value);
                 //cart.Add(txtIdBook.Text);
             }

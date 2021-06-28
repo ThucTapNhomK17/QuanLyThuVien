@@ -213,89 +213,41 @@ namespace Library_Manager
                     #region TÌM 
                     if (rbtnFindbySerial.Checked)
                     {
-                        try
-                        {
-                            table = Book.findBookBySerial(txtSerial.Text);
-                            txtSerial.Text = table.Rows[0][0].ToString();
-                            txtName.Text = table.Rows[0][1].ToString();
-                            txtAuthor.Text = table.Rows[0][2].ToString();
-                            txtPH.Text = table.Rows[0][3].ToString();
-                            txtAmount.Text = table.Rows[0][4].ToString();
-                            //img
-                            if (table.Rows[0][5] == DBNull.Value)
-                            {
-                                ptbImg.Image = ptbImg.InitialImage;
-                            }
-                            else
-                            {
-                                byte[] img = (byte[])table.Rows[0][5];
-                                MemoryStream ms = new MemoryStream(img);
-                                ptbImg.Image = Image.FromStream(ms);
-                            }
-                            //
-                            txtTag.Text = table.Rows[0][6].ToString();
-                            tsbtnDelMode.Enabled = tsbtnUpdateMode.Enabled = true;
-                            xóaToolStripMenuItem.Enabled = sửaToolStripMenuItem.Enabled = true;
-                        }
-                        catch(Exception ex)
-                        {
-                            clear();
-                            MessageBox.Show("Không tìm thấy sách", "Thất bại!");
-                        }
+                        table = Book.findBookBySerial(txtSerial.Text);
+
+                        txtSerial.Text = table.Rows[0][0].ToString();
+                        txtName.Text = table.Rows[0][6].ToString();
+                        txtAuthor.Text = table.Rows[0][7].ToString();
+                        txtPH.Text = table.Rows[0][8].ToString();
+                        txtAmount.Text = table.Rows[0][10].ToString();
+
+                        txtTag.Text = table.Rows[0][9].ToString();
+                        tsbtnDelMode.Enabled = tsbtnUpdateMode.Enabled = true;
+                        xóaToolStripMenuItem.Enabled = sửaToolStripMenuItem.Enabled = true;
+
                     }
                     else
                     {
-                        try
-                        {
-                            table = Book.findBookByName(txtName.Text);
-                            txtSerial.Text = table.Rows[0][0].ToString();
-                            txtName.Text = table.Rows[0][1].ToString();
-                            txtAuthor.Text = table.Rows[0][2].ToString();
-                            txtPH.Text = table.Rows[0][3].ToString();
-                            txtAmount.Text = table.Rows[0][4].ToString();
-                            //img
-                            try
-                            {
-                                if (table.Rows[0][5] == DBNull.Value)
-                                {
-                                    ptbImg.Image = ptbImg.InitialImage;
-                                }
-                                else
-                                {
-                                    byte[] img = (byte[])table.Rows[0][5];
-                                    MemoryStream ms = new MemoryStream(img);
-                                    ptbImg.Image = Image.FromStream(ms);
-                                }
-                                //
-                            }
-                            catch (Exception ex)
-                            {
-                                Console.WriteLine(ex.Message);
-                            }
-                            txtTag.Text = table.Rows[0][6].ToString();
-                            tsbtnDelMode.Enabled = tsbtnUpdateMode.Enabled = true;
-                            xóaToolStripMenuItem.Enabled = sửaToolStripMenuItem.Enabled = true;
-                        }
-                        catch (Exception ex)
-                        {
-                            clear();
-                            MessageBox.Show("Không tìm thấy sách", "Thất bại!");
-                        }
+                        table = Book.findBookByName(txtName.Text);
+
+                        txtSerial.Text = table.Rows[0][0].ToString();
+                        txtName.Text = table.Rows[0][6].ToString();
+                        txtAuthor.Text = table.Rows[0][7].ToString();
+                        txtPH.Text = table.Rows[0][8].ToString();
+                        txtAmount.Text = table.Rows[0][10].ToString();
+
+                        txtTag.Text = table.Rows[0][9].ToString();
+                        tsbtnDelMode.Enabled = tsbtnUpdateMode.Enabled = true;
+                        xóaToolStripMenuItem.Enabled = sửaToolStripMenuItem.Enabled = true;
                     }
+
                     setAutoComplete();
                     #endregion TÌM
                     break;
                 case "Thêm":
                     #region THÊM
-                    if ((txtAuthor.TextLength * txtName.TextLength * txtPH.TextLength * txtSerial.TextLength * txtTag.TextLength * imgLogcation.Length) == 0)
-                    {
-                        MessageBox.Show("Bạn cần điền đầy đủ thông tin cho sách", "Lỗi", MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    }
-                    else
-                        if (Book.insertBook(txtSerial.Text, txtName.Text, txtAuthor.Text, txtPH.Text, (int)txtAmount.Value, imgLogcation, txtTag.Text))
-                            MessageBox.Show("Thêm sách thành công!", "Thành công");
-                        else
-                            MessageBox.Show("Thêm sách thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Book.insertBook(txtSerial.Text, txtName.Text, txtAuthor.Text, txtPH.Text, txtTag.Text, (int)txtAmount.Value);
+                    MessageBox.Show("Thêm sách thành công!", "Thành công");
                     #endregion THÊM
                     clear();
                     setAutoComplete();
@@ -316,20 +268,8 @@ namespace Library_Manager
                     #region SỬA
                     if (MessageBox.Show("Bạn có chắc muốn sửa thông tin của sách?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
-                        if ((txtAuthor.TextLength * txtName.TextLength * txtPH.TextLength * txtSerial.TextLength * txtTag.TextLength)==0 || (imgLogcation.Length == 0 && table.Rows[0][5] == DBNull.Value))
-                        {
-                            MessageBox.Show("Bạn cần điền đầy đủ thông tin cho sách", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            if (!Book.updateBook(txtSerial.Text, txtName.Text, txtAuthor.Text, txtPH.Text, (int)txtAmount.Value, imgLogcation, txtTag.Text))
-                                if (!Book.updateBook(txtSerial.Text, txtName.Text, txtAuthor.Text, txtPH.Text, (int)txtAmount.Value, (byte[])table.Rows[0][5], txtTag.Text))
-                                {
-                                    MessageBox.Show("Sửa sách thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    break;
-                                }
-                            MessageBox.Show("Sửa sách thành công!", "Thành công");
-                        }
+                        Book.updateBook(txtSerial.Text, txtName.Text,  txtAuthor.Text, txtPH.Text, txtTag.Text, (int)txtAmount.Value);
+                        MessageBox.Show("Sửa sách thành công!", "Thành công");
                     }
                     setAutoComplete();
                     break;
