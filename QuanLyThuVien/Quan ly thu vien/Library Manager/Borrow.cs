@@ -82,24 +82,17 @@ namespace Library_Manager
 
         }
         //public static bool insertBorrow(string id, string serial, int quantum, DateTime timecreate, int borrowTime, string comment)
-        public static bool insertBorrow(string id, string idbook)
+        public static bool insertBorrow(string idbor, string idcard, string idbook, int quan, string time, string note)
         {
-            try
-            {
                 SqlCommand sqlCommand;
                 string cmd = string.Format("EXEC PROC_INSERT_BORROW_DETAIL " +
-                                        "{0}, '{1}'", id, idbook);
+                                        "'{0}', '{1}','{2}','{3}','{4}','{5}'", idbor, idcard, idbook, quan, time, note);
                 //Utility.DATABASECONNECTION.ExecuteNonQuery(cmd);
                 sqlCommand = new SqlCommand(cmd, Utility.DATABASECONNECTION.sqlConn);
-                //sqlCommand.Parameters.Add("@time", timecreate);
                 sqlCommand.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-
-            }
             return true;
+
+
         }
 
         public static bool deleteBorrow(string id)
@@ -107,7 +100,22 @@ namespace Library_Manager
             string cmd = "";
             try
             {
-                cmd = string.Format("EXEC PROC_DELETE_BORROW {0}", id);
+                cmd = string.Format("EXEC PROC_DELETE_BORROW '{0}'", id);
+                Utility.DATABASECONNECTION.ExecuteNonQuery(cmd);
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public static bool deleteBorrow_Detail(string id)
+        {
+            string cmd = "";
+            try
+            {
+                cmd = string.Format("EXEC PROC_DELETE_BORROW_DETAIL '{0}'", id);
                 Utility.DATABASECONNECTION.ExecuteNonQuery(cmd);
             }
             catch (Exception ex)

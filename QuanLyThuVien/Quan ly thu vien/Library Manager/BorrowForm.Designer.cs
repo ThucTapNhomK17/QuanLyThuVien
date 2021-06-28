@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ComboBox txtborrow;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BorrowForm));
+            this.txtborrow = new System.Windows.Forms.ComboBox();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -93,7 +93,6 @@
             this.label = new System.Windows.Forms.Label();
             this.lblQuantum = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            txtborrow = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -104,20 +103,17 @@
             // 
             // txtborrow
             // 
-            txtborrow.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            txtborrow.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            txtborrow.Enabled = false;
-            txtborrow.FormattingEnabled = true;
-            txtborrow.Items.AddRange(new object[] {
+            this.txtborrow.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.txtborrow.FormattingEnabled = true;
+            this.txtborrow.Items.AddRange(new object[] {
             "1 tuần",
             "2 tuần",
             "3 tuần",
             "4 tuần"});
-            txtborrow.Location = new System.Drawing.Point(166, 381);
-            txtborrow.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            txtborrow.Name = "txtborrow";
-            txtborrow.Size = new System.Drawing.Size(147, 31);
-            txtborrow.TabIndex = 84;
+            this.txtborrow.Location = new System.Drawing.Point(136, 329);
+            this.txtborrow.Name = "txtborrow";
+            this.txtborrow.Size = new System.Drawing.Size(121, 24);
+            this.txtborrow.TabIndex = 84;
             // 
             // barManager1
             // 
@@ -142,17 +138,17 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(5);
-            this.barDockControlTop.Size = new System.Drawing.Size(1432, 0);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(1132, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 767);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 653);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(5);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1432, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1132, 0);
             // 
             // barDockControlLeft
             // 
@@ -160,17 +156,17 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(5);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 767);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 653);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1432, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(1132, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(5);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 767);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 653);
             // 
             // barLargeButtonItem1
             // 
@@ -233,7 +229,8 @@
             this.tiệnÍchToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1432, 30);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1132, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -243,20 +240,20 @@
             this.đăngXuấtToolStripMenuItem,
             this.thoátToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(160, 26);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
@@ -267,27 +264,27 @@
             this.thêmToolStripMenuItem,
             this.xóaToolStripMenuItem});
             this.chếĐộToolStripMenuItem.Name = "chếĐộToolStripMenuItem";
-            this.chếĐộToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.chếĐộToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.chếĐộToolStripMenuItem.Text = "Chế độ";
             // 
             // tìmToolStripMenuItem
             // 
             this.tìmToolStripMenuItem.Name = "tìmToolStripMenuItem";
-            this.tìmToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
+            this.tìmToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.tìmToolStripMenuItem.Text = "Tìm...";
             this.tìmToolStripMenuItem.Click += new System.EventHandler(this.tìmToolStripMenuItem_Click);
             // 
             // thêmToolStripMenuItem
             // 
             this.thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
-            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
+            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.thêmToolStripMenuItem.Text = "Thêm...";
             this.thêmToolStripMenuItem.Click += new System.EventHandler(this.thêmToolStripMenuItem_Click);
             // 
             // xóaToolStripMenuItem
             // 
             this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.xóaToolStripMenuItem.Text = "Xóa";
             this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
             // 
@@ -296,13 +293,13 @@
             this.tiệnÍchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thôngTinToolStripMenuItem});
             this.tiệnÍchToolStripMenuItem.Name = "tiệnÍchToolStripMenuItem";
-            this.tiệnÍchToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.tiệnÍchToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.tiệnÍchToolStripMenuItem.Text = "Tiện ích";
             // 
             // thôngTinToolStripMenuItem
             // 
             this.thôngTinToolStripMenuItem.Name = "thôngTinToolStripMenuItem";
-            this.thôngTinToolStripMenuItem.Size = new System.Drawing.Size(83, 26);
+            this.thôngTinToolStripMenuItem.Size = new System.Drawing.Size(67, 22);
             // 
             // oFDImage
             // 
@@ -311,10 +308,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 239);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(11, 206);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 22);
+            this.label1.Size = new System.Drawing.Size(85, 19);
             this.label1.TabIndex = 16;
             this.label1.Text = "Mã sinh viên";
             // 
@@ -328,11 +324,10 @@
             // 
             this.txtIdStudent.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtIdStudent.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtIdStudent.Location = new System.Drawing.Point(166, 240);
-            this.txtIdStudent.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtIdStudent.Location = new System.Drawing.Point(136, 207);
             this.txtIdStudent.MaxLength = 15;
             this.txtIdStudent.Name = "txtIdStudent";
-            this.txtIdStudent.Size = new System.Drawing.Size(151, 30);
+            this.txtIdStudent.Size = new System.Drawing.Size(124, 26);
             this.txtIdStudent.TabIndex = 1;
             this.txtIdStudent.TextChanged += new System.EventHandler(this.VerifyInput_TextChanged);
             // 
@@ -347,10 +342,10 @@
             this.lblMode,
             this.lblAccount,
             this.lblTimeSys});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 732);
+            this.toolStrip2.Location = new System.Drawing.Point(0, 623);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip2.Size = new System.Drawing.Size(1432, 35);
+            this.toolStrip2.Size = new System.Drawing.Size(1132, 30);
             this.toolStrip2.TabIndex = 36;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -359,7 +354,7 @@
             this.lblMode.Font = new System.Drawing.Font("Times New Roman", 10.25F, System.Drawing.FontStyle.Bold);
             this.lblMode.ForeColor = System.Drawing.Color.Green;
             this.lblMode.Name = "lblMode";
-            this.lblMode.Size = new System.Drawing.Size(54, 32);
+            this.lblMode.Size = new System.Drawing.Size(41, 27);
             this.lblMode.Text = "Mode";
             // 
             // lblAccount
@@ -368,22 +363,21 @@
             this.lblAccount.Font = new System.Drawing.Font("Times New Roman", 10.25F, System.Drawing.FontStyle.Bold);
             this.lblAccount.ForeColor = System.Drawing.Color.Maroon;
             this.lblAccount.Name = "lblAccount";
-            this.lblAccount.Size = new System.Drawing.Size(74, 32);
+            this.lblAccount.Size = new System.Drawing.Size(58, 27);
             this.lblAccount.Text = "Account";
             // 
             // lblTimeSys
             // 
             this.lblTimeSys.Font = new System.Drawing.Font("Times New Roman", 10.25F, System.Drawing.FontStyle.Bold);
             this.lblTimeSys.Name = "lblTimeSys";
-            this.lblTimeSys.Size = new System.Drawing.Size(83, 32);
+            this.lblTimeSys.Size = new System.Drawing.Size(66, 27);
             this.lblTimeSys.Text = "Thời gian";
             // 
             // btnMode
             // 
-            this.btnMode.Location = new System.Drawing.Point(1249, 650);
-            this.btnMode.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnMode.Location = new System.Drawing.Point(1022, 561);
             this.btnMode.Name = "btnMode";
-            this.btnMode.Size = new System.Drawing.Size(147, 55);
+            this.btnMode.Size = new System.Drawing.Size(120, 48);
             this.btnMode.TabIndex = 7;
             this.btnMode.Text = "mode";
             this.btnMode.UseVisualStyleBackColor = true;
@@ -395,7 +389,7 @@
             this.tsbtnFindMode.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbtnFindMode.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnFindMode.Name = "tsbtnFindMode";
-            this.tsbtnFindMode.Size = new System.Drawing.Size(68, 108);
+            this.tsbtnFindMode.Size = new System.Drawing.Size(68, 93);
             this.tsbtnFindMode.Text = "Tìm";
             this.tsbtnFindMode.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbtnFindMode.Click += new System.EventHandler(this.tsbtnFindMode_Click);
@@ -403,7 +397,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 111);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 96);
             // 
             // tsbtnAddMode
             // 
@@ -411,7 +405,7 @@
             this.tsbtnAddMode.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbtnAddMode.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnAddMode.Name = "tsbtnAddMode";
-            this.tsbtnAddMode.Size = new System.Drawing.Size(68, 108);
+            this.tsbtnAddMode.Size = new System.Drawing.Size(68, 93);
             this.tsbtnAddMode.Text = "Thêm";
             this.tsbtnAddMode.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbtnAddMode.Click += new System.EventHandler(this.tsbtnAddMode_Click);
@@ -419,7 +413,7 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 111);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 96);
             // 
             // tsbtnDelMode
             // 
@@ -427,7 +421,7 @@
             this.tsbtnDelMode.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbtnDelMode.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnDelMode.Name = "tsbtnDelMode";
-            this.tsbtnDelMode.Size = new System.Drawing.Size(68, 108);
+            this.tsbtnDelMode.Size = new System.Drawing.Size(68, 93);
             this.tsbtnDelMode.Text = "Xóa";
             this.tsbtnDelMode.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbtnDelMode.Click += new System.EventHandler(this.tsbtnDelMode_Click);
@@ -435,7 +429,7 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 111);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 96);
             // 
             // tsbtnExit
             // 
@@ -444,7 +438,7 @@
             this.tsbtnExit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbtnExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnExit.Name = "tsbtnExit";
-            this.tsbtnExit.Size = new System.Drawing.Size(68, 108);
+            this.tsbtnExit.Size = new System.Drawing.Size(68, 93);
             this.tsbtnExit.Text = "Thoát";
             this.tsbtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbtnExit.Click += new System.EventHandler(this.tsbtnExit_Click);
@@ -453,7 +447,7 @@
             // 
             this.toolStripSeparator5.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 111);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 96);
             // 
             // btnReset
             // 
@@ -461,7 +455,7 @@
             this.btnReset.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReset.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(68, 108);
+            this.btnReset.Size = new System.Drawing.Size(68, 93);
             this.btnReset.Text = "Đặt lại";
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnReset.ToolTipText = "Đặt lại";
@@ -482,9 +476,9 @@
             this.tsbtnExit,
             this.toolStripSeparator5,
             this.btnReset});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1432, 111);
+            this.toolStrip1.Size = new System.Drawing.Size(1132, 96);
             this.toolStrip1.TabIndex = 37;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -493,10 +487,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(1013, 152);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(829, 131);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 32);
+            this.label2.Size = new System.Drawing.Size(150, 25);
             this.label2.TabIndex = 49;
             this.label2.Text = "SÁCH MƯỢN";
             // 
@@ -504,21 +497,19 @@
             // 
             this.txtIdBorrow.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtIdBorrow.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtIdBorrow.Location = new System.Drawing.Point(166, 173);
-            this.txtIdBorrow.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtIdBorrow.Location = new System.Drawing.Point(136, 149);
             this.txtIdBorrow.MaxLength = 15;
             this.txtIdBorrow.Name = "txtIdBorrow";
-            this.txtIdBorrow.Size = new System.Drawing.Size(151, 30);
+            this.txtIdBorrow.Size = new System.Drawing.Size(124, 26);
             this.txtIdBorrow.TabIndex = 2;
             this.txtIdBorrow.TextChanged += new System.EventHandler(this.VerifyInput_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 173);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(11, 149);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 22);
+            this.label3.Size = new System.Drawing.Size(52, 19);
             this.label3.TabIndex = 51;
             this.label3.Text = "Mã thẻ";
             // 
@@ -531,13 +522,12 @@
             this.colSerial,
             this.colNameOfBook,
             this.colAmount});
-            this.dtgvCart.Location = new System.Drawing.Point(774, 197);
-            this.dtgvCart.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dtgvCart.Location = new System.Drawing.Point(633, 170);
             this.dtgvCart.Name = "dtgvCart";
             this.dtgvCart.ReadOnly = true;
             this.dtgvCart.RowHeadersWidth = 51;
             this.dtgvCart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvCart.Size = new System.Drawing.Size(645, 428);
+            this.dtgvCart.Size = new System.Drawing.Size(528, 370);
             this.dtgvCart.TabIndex = 52;
             // 
             // colSerial
@@ -570,10 +560,9 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(166, 650);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnAdd.Location = new System.Drawing.Point(136, 561);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(143, 69);
+            this.btnAdd.Size = new System.Drawing.Size(117, 60);
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "THÊM";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -583,21 +572,19 @@
             // 
             this.txtIdBook.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtIdBook.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtIdBook.Location = new System.Drawing.Point(166, 309);
-            this.txtIdBook.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtIdBook.Location = new System.Drawing.Point(136, 267);
             this.txtIdBook.MaxLength = 15;
             this.txtIdBook.Name = "txtIdBook";
-            this.txtIdBook.Size = new System.Drawing.Size(202, 30);
+            this.txtIdBook.Size = new System.Drawing.Size(166, 26);
             this.txtIdBook.TabIndex = 3;
             this.txtIdBook.TextChanged += new System.EventHandler(this.txtIdBook_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 312);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(11, 269);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 22);
+            this.label4.Size = new System.Drawing.Size(61, 19);
             this.label4.TabIndex = 55;
             this.label4.Text = "Mã sách";
             // 
@@ -605,35 +592,32 @@
             // 
             this.txtComment.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtComment.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtComment.Location = new System.Drawing.Point(166, 498);
-            this.txtComment.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtComment.Location = new System.Drawing.Point(136, 430);
             this.txtComment.MaxLength = 100;
             this.txtComment.Multiline = true;
             this.txtComment.Name = "txtComment";
-            this.txtComment.Size = new System.Drawing.Size(566, 127);
+            this.txtComment.Size = new System.Drawing.Size(464, 110);
             this.txtComment.TabIndex = 6;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 487);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(14, 421);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 22);
+            this.label5.Size = new System.Drawing.Size(55, 19);
             this.label5.TabIndex = 57;
             this.label5.Text = "Ghi chú";
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(410, 312);
-            this.txtAmount.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtAmount.Location = new System.Drawing.Point(335, 269);
             this.txtAmount.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(73, 30);
+            this.txtAmount.Size = new System.Drawing.Size(60, 26);
             this.txtAmount.TabIndex = 4;
             this.txtAmount.Value = new decimal(new int[] {
             1,
@@ -644,20 +628,18 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 384);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(11, 332);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 22);
+            this.label6.Size = new System.Drawing.Size(103, 19);
             this.label6.TabIndex = 59;
             this.label6.Text = "Thời gian mượn";
             // 
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(353, 650);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCancel.Location = new System.Drawing.Point(289, 561);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(152, 69);
+            this.btnCancel.Size = new System.Drawing.Size(124, 60);
             this.btnCancel.TabIndex = 64;
             this.btnCancel.Text = "BỎ MƯỢN";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -666,10 +648,9 @@
             // btnFullCancel
             // 
             this.btnFullCancel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFullCancel.Location = new System.Drawing.Point(564, 650);
-            this.btnFullCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnFullCancel.Location = new System.Drawing.Point(461, 561);
             this.btnFullCancel.Name = "btnFullCancel";
-            this.btnFullCancel.Size = new System.Drawing.Size(168, 69);
+            this.btnFullCancel.Size = new System.Drawing.Size(137, 60);
             this.btnFullCancel.TabIndex = 65;
             this.btnFullCancel.Text = "BỎ MƯỢN TOÀN BỘ";
             this.btnFullCancel.UseVisualStyleBackColor = true;
@@ -678,10 +659,9 @@
             // rbtnFindbyIdBorrow
             // 
             this.rbtnFindbyIdBorrow.AutoSize = true;
-            this.rbtnFindbyIdBorrow.Location = new System.Drawing.Point(408, 177);
-            this.rbtnFindbyIdBorrow.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.rbtnFindbyIdBorrow.Location = new System.Drawing.Point(334, 153);
             this.rbtnFindbyIdBorrow.Name = "rbtnFindbyIdBorrow";
-            this.rbtnFindbyIdBorrow.Size = new System.Drawing.Size(211, 26);
+            this.rbtnFindbyIdBorrow.Size = new System.Drawing.Size(166, 23);
             this.rbtnFindbyIdBorrow.TabIndex = 71;
             this.rbtnFindbyIdBorrow.TabStop = true;
             this.rbtnFindbyIdBorrow.Text = "Tìm bằng mã thẻ mượn";
@@ -692,10 +672,9 @@
             // rbtnFindbyIdStudent
             // 
             this.rbtnFindbyIdStudent.AutoSize = true;
-            this.rbtnFindbyIdStudent.Location = new System.Drawing.Point(410, 239);
-            this.rbtnFindbyIdStudent.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.rbtnFindbyIdStudent.Location = new System.Drawing.Point(335, 206);
             this.rbtnFindbyIdStudent.Name = "rbtnFindbyIdStudent";
-            this.rbtnFindbyIdStudent.Size = new System.Drawing.Size(209, 26);
+            this.rbtnFindbyIdStudent.Size = new System.Drawing.Size(160, 23);
             this.rbtnFindbyIdStudent.TabIndex = 70;
             this.rbtnFindbyIdStudent.TabStop = true;
             this.rbtnFindbyIdStudent.Text = "Tìm bằng mã sinh viên";
@@ -705,39 +684,39 @@
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(13, 434);
-            this.label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label.Location = new System.Drawing.Point(11, 375);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(141, 22);
+            this.label.Size = new System.Drawing.Size(107, 19);
             this.label.TabIndex = 77;
             this.label.Text = "Số sách còn lại: \r\n";
+            this.label.Visible = false;
             // 
             // lblQuantum
             // 
             this.lblQuantum.AutoSize = true;
-            this.lblQuantum.Location = new System.Drawing.Point(162, 434);
-            this.lblQuantum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblQuantum.Location = new System.Drawing.Point(133, 375);
             this.lblQuantum.Name = "lblQuantum";
-            this.lblQuantum.Size = new System.Drawing.Size(20, 22);
+            this.lblQuantum.Size = new System.Drawing.Size(17, 19);
             this.lblQuantum.TabIndex = 78;
             this.lblQuantum.Text = "0";
+            this.lblQuantum.Visible = false;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(190, 434);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(155, 375);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(170, 22);
+            this.label8.Size = new System.Drawing.Size(132, 19);
             this.label8.TabIndex = 79;
             this.label8.Text = "quyển trong thư viện";
+            this.label8.Visible = false;
             // 
             // BorrowForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1432, 767);
-            this.Controls.Add(txtborrow);
+            this.ClientSize = new System.Drawing.Size(1132, 653);
+            this.Controls.Add(this.txtborrow);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lblQuantum);
             this.Controls.Add(this.label);
@@ -769,7 +748,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("BorrowForm.IconOptions.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "BorrowForm";
             this.Text = "Thao tác với thẻ mượn sách";
@@ -847,12 +826,13 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.RadioButton rbtnFindbyIdBorrow;
         private System.Windows.Forms.RadioButton rbtnFindbyIdStudent;
-        private System.Windows.Forms.Label label;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lblQuantum;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSerial;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNameOfBook;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAmount;
         private System.Windows.Forms.ComboBox cbxBorrowtime;
+        private System.Windows.Forms.ComboBox txtborrow;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblQuantum;
+        private System.Windows.Forms.Label label;
     }
 }

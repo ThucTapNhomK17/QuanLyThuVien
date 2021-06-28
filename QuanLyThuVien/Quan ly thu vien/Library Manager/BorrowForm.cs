@@ -93,7 +93,7 @@ namespace Library_Manager
 
                     //set txt need
                     //
-                    txtIdBorrow.Enabled = false;
+                    //txtIdBorrow.Enabled = false;
                     txtIdStudent.Enabled = txtIdBook.Enabled = txtAmount.Enabled = txtComment.Enabled = status;
                     //Set rbtn find
                     //rbtnFindbyId.Select();
@@ -182,16 +182,16 @@ namespace Library_Manager
                         dtgvCart.Rows.Clear();
                         //try
                         //{
-                            table = Borrow.findBorrowByIdStudent(txtIdStudent.Text);
-                            foreach (DataRow row in table.Rows)
-                            {
-                                if(!txtIdBook.Text.Contains(row[0].ToString()))
-                                    txtIdBorrow.Text += row[0].ToString() + ", ";
-                                dtgvCart.Rows.Add(row[1], Book.getBookNameBySerial(row[1].ToString()), row[2].ToString());
-                 
-                            }
-                            //txtIdStudent.Text = table.Rows[0][0].ToString();
-                            xóaToolStripMenuItem.Enabled = tsbtnDelMode.Enabled = true;
+                        table = Borrow.findBorrowByIdStudent(txtIdStudent.Text);
+                        foreach (DataRow row in table.Rows)
+                        {
+                            if (!txtIdBook.Text.Contains(row[3].ToString()))
+                                txtIdBorrow.Text += row[0].ToString() + ", ";
+                            dtgvCart.Rows.Add(row[3], Book.getBookNameBySerial(row[3].ToString()), row[3].ToString());
+
+                        }
+                        //txtIdStudent.Text = table.Rows[0][0].ToString();
+                        xóaToolStripMenuItem.Enabled = tsbtnDelMode.Enabled = true;
                         //}
                         //catch (Exception ex)
                         //{
@@ -204,15 +204,15 @@ namespace Library_Manager
                     {
                         //try
                         //{
-                            dtgvCart.Rows.Clear();
-                            table = Borrow.findBorrowById(txtIdBorrow.Text);
-                            txtIdStudent.Text = table.Rows[0][0].ToString();
-                            foreach (DataRow row in table.Rows)
-                            {
-                                dtgvCart.Rows.Add(row[1].ToString(), Book.getBookNameBySerial(row[1].ToString()), row[2].ToString());
-                            }
-                            //edit here             
-                            xóaToolStripMenuItem.Enabled = tsbtnDelMode.Enabled = true;
+                        dtgvCart.Rows.Clear();
+                        table = Borrow.findBorrowById(txtIdBorrow.Text);
+                        txtIdStudent.Text = table.Rows[0][0].ToString();
+                        foreach (DataRow row in table.Rows)
+                        {
+                            dtgvCart.Rows.Add(row[0].ToString(), Book.getBookNameBySerial(row[0].ToString()), row[2].ToString());
+                        }
+                        //edit here             
+                        xóaToolStripMenuItem.Enabled = tsbtnDelMode.Enabled = true;
                         //}
                         //catch (Exception ex)
                         //{
@@ -232,35 +232,37 @@ namespace Library_Manager
                         //}
                         //else
                         //{
-                            //if (Borrow.numOfBorrowCard(txtIdStudent.Text) < 5)
+                        //if (Borrow.numOfBorrowCard(txtIdStudent.Text) < 5)
+                        //{
+                        //if (Borrow.insertBorrow(txtIdStudent.Text) > 0)
+                        //try
+                        //{
+                            //txtIdBorrow.Text = (Borrow.getId()).ToString();
+                              //txtIdBorrow.Text = "";
+                            //foreach (DataGridViewRow row in dtgvCart.Rows)
                             //{
-                                //if (Borrow.insertBorrow(txtIdStudent.Text) > 0)
-                                    try
-                                    {
-                                        txtIdBorrow.Text = (Borrow.getId()).ToString();
-                                        foreach (DataGridViewRow row in dtgvCart.Rows)
-                                        {
-                                        Borrow.insertBorrow(txtIdBorrow.Text, txtIdBook.Text);
-                                        //Borrow.insertBorrow(txtIdBorrow.Text, row.Cells[0].Value.ToString(), int.Parse(row.Cells[2].Value.ToString()), DateTime.Now, cbxBorrowtime.GetItemText(cbxBorrowtime.SelectedItem)[0] - '0', txtComment.Text);
-                                    }
-                                        txtIdBook.Text = "";
-                                        txtAmount.Value = 1;
-                                        txtComment.Text = "";
-                                        lblQuantum.Text = "0";
-                                        dtgvCart.Rows.Clear();
-                                        MessageBox.Show("Tạo thành công thẻ mượn sách cho sinh viên : " + txtIdStudent.Text + "\nMã thẻ mượn : " + txtIdBorrow.Text, "Thông báo");
-                                        cbxBorrowtime.SelectedIndex = -1;
-                                    }
-                                    catch (Exception ex)
-                                    {
-                                        MessageBox.Show("Không thể tạo\nLỗi : " + ex.Message, "Thông báo");
-                                        break;
-                                    }
+                            //    Borrow.insertBorrow(txtIdBorrow.Text,txtIdStudent.Text, txtIdBook.Text, (int)txtAmount.Value, txtborrow.Text, txtComment.Text);
                             //}
-                            //else
-                            //{
-                            //    MessageBox.Show("Bạn đã đạt giới hạn 5 phiếu mượn sách", "Thông báo");
-                            //}
+                            //txtIdBook.Text = "";
+                            //txtAmount.Value = 1;
+                            //txtComment.Text = "";
+                            //txtborrow.Text = "1";
+                            //lblQuantum.Text = "0";
+                            Borrow.insertBorrow(txtIdBorrow.Text, txtIdStudent.Text, txtIdBook.Text, (int)txtAmount.Value, txtborrow.Text, txtComment.Text);
+                            dtgvCart.Rows.Clear();
+                            //MessageBox.Show("Tạo thành công thẻ mượn sách cho sinh viên : " + txtIdStudent.Text + "\nMã thẻ mượn : " + txtIdBorrow.Text, "Thông báo");
+                            //cbxBorrowtime.SelectedIndex = -1;
+                        //}
+                        //catch (Exception ex)
+                        //{
+                        //    MessageBox.Show("Không thể tạo\nLỗi : " + ex.Message, "Thông báo");
+                        //    break;
+                        //}
+                        //}
+                        //else
+                        //{
+                        //    MessageBox.Show("Bạn đã đạt giới hạn 5 phiếu mượn sách", "Thông báo");
+                        //}
                         //}
                         setAutoComplete();
                     }
@@ -270,7 +272,7 @@ namespace Library_Manager
                 case "Xóa":
                     if (MessageBox.Show("Bạn có chắc muốn xóa thẻ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
-                        if (Borrow.deleteBorrow(txtIdBorrow.Text))
+                        if (Borrow.deleteBorrow_Detail(txtIdBorrow.Text))
                         {
                             MessageBox.Show("Xóa thẻ thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
@@ -283,7 +285,7 @@ namespace Library_Manager
                     break;
             }
         }
-        
+
 
         private void tsbtnExit_Click(object sender, EventArgs e)
         {
@@ -301,7 +303,7 @@ namespace Library_Manager
         private void StudentForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Có vẻ như bạn chưa hoàn thành công việc... \n\n Bạn có chắc muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
-                    e.Cancel = true;
+                e.Cancel = true;
         }
 
 
