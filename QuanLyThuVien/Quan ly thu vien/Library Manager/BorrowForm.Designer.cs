@@ -76,9 +76,6 @@
             this.txtIdBorrow = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dtgvCart = new System.Windows.Forms.DataGridView();
-            this.colSerial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNameOfBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtIdBook = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -93,6 +90,12 @@
             this.label = new System.Windows.Forms.Label();
             this.lblQuantum = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.colSerial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNameOfBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colmasv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colmathe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coltgian = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -487,7 +490,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(829, 131);
+            this.label2.Location = new System.Drawing.Point(778, 131);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(150, 25);
             this.label2.TabIndex = 49;
@@ -521,41 +524,17 @@
             this.dtgvCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSerial,
             this.colNameOfBook,
-            this.colAmount});
-            this.dtgvCart.Location = new System.Drawing.Point(633, 170);
+            this.colAmount,
+            this.colmasv,
+            this.colmathe,
+            this.coltgian});
+            this.dtgvCart.Location = new System.Drawing.Point(592, 159);
             this.dtgvCart.Name = "dtgvCart";
             this.dtgvCart.ReadOnly = true;
             this.dtgvCart.RowHeadersWidth = 51;
             this.dtgvCart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvCart.Size = new System.Drawing.Size(528, 370);
             this.dtgvCart.TabIndex = 52;
-            // 
-            // colSerial
-            // 
-            this.colSerial.HeaderText = "Serial";
-            this.colSerial.MinimumWidth = 6;
-            this.colSerial.Name = "colSerial";
-            this.colSerial.ReadOnly = true;
-            this.colSerial.Width = 125;
-            // 
-            // colNameOfBook
-            // 
-            this.colNameOfBook.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colNameOfBook.FillWeight = 350F;
-            this.colNameOfBook.HeaderText = "Tên sách";
-            this.colNameOfBook.MinimumWidth = 6;
-            this.colNameOfBook.Name = "colNameOfBook";
-            this.colNameOfBook.ReadOnly = true;
-            this.colNameOfBook.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // colAmount
-            // 
-            this.colAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colAmount.HeaderText = "Số lượng";
-            this.colAmount.MinimumWidth = 6;
-            this.colAmount.Name = "colAmount";
-            this.colAmount.ReadOnly = true;
-            this.colAmount.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // btnAdd
             // 
@@ -566,6 +545,7 @@
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "THÊM";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Visible = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtIdBook
@@ -592,11 +572,11 @@
             // 
             this.txtComment.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtComment.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtComment.Location = new System.Drawing.Point(136, 430);
+            this.txtComment.Location = new System.Drawing.Point(134, 413);
             this.txtComment.MaxLength = 100;
             this.txtComment.Multiline = true;
             this.txtComment.Name = "txtComment";
-            this.txtComment.Size = new System.Drawing.Size(464, 110);
+            this.txtComment.Size = new System.Drawing.Size(361, 110);
             this.txtComment.TabIndex = 6;
             // 
             // label5
@@ -643,6 +623,7 @@
             this.btnCancel.TabIndex = 64;
             this.btnCancel.Text = "BỎ MƯỢN";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Visible = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnFullCancel
@@ -654,6 +635,7 @@
             this.btnFullCancel.TabIndex = 65;
             this.btnFullCancel.Text = "BỎ MƯỢN TOÀN BỘ";
             this.btnFullCancel.UseVisualStyleBackColor = true;
+            this.btnFullCancel.Visible = false;
             this.btnFullCancel.Click += new System.EventHandler(this.btnFullCancel_Click);
             // 
             // rbtnFindbyIdBorrow
@@ -710,6 +692,55 @@
             this.label8.TabIndex = 79;
             this.label8.Text = "quyển trong thư viện";
             this.label8.Visible = false;
+            // 
+            // colSerial
+            // 
+            this.colSerial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colSerial.HeaderText = "Mã sách";
+            this.colSerial.MinimumWidth = 6;
+            this.colSerial.Name = "colSerial";
+            this.colSerial.ReadOnly = true;
+            this.colSerial.Width = 70;
+            // 
+            // colNameOfBook
+            // 
+            this.colNameOfBook.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colNameOfBook.FillWeight = 350F;
+            this.colNameOfBook.HeaderText = "Tên sách";
+            this.colNameOfBook.MinimumWidth = 6;
+            this.colNameOfBook.Name = "colNameOfBook";
+            this.colNameOfBook.ReadOnly = true;
+            this.colNameOfBook.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colNameOfBook.Width = 90;
+            // 
+            // colAmount
+            // 
+            this.colAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colAmount.HeaderText = "Số lượng";
+            this.colAmount.MinimumWidth = 6;
+            this.colAmount.Name = "colAmount";
+            this.colAmount.ReadOnly = true;
+            this.colAmount.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colAmount.Width = 56;
+            // 
+            // colmasv
+            // 
+            this.colmasv.HeaderText = "mã sv";
+            this.colmasv.Name = "colmasv";
+            this.colmasv.ReadOnly = true;
+            this.colmasv.Width = 49;
+            // 
+            // colmathe
+            // 
+            this.colmathe.HeaderText = "mã thẻ";
+            this.colmathe.Name = "colmathe";
+            this.colmathe.ReadOnly = true;
+            // 
+            // coltgian
+            // 
+            this.coltgian.HeaderText = "Số ngày mượn";
+            this.coltgian.Name = "coltgian";
+            this.coltgian.ReadOnly = true;
             // 
             // BorrowForm
             // 
@@ -826,13 +857,16 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.RadioButton rbtnFindbyIdBorrow;
         private System.Windows.Forms.RadioButton rbtnFindbyIdStudent;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSerial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNameOfBook;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAmount;
         private System.Windows.Forms.ComboBox cbxBorrowtime;
         private System.Windows.Forms.ComboBox txtborrow;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblQuantum;
         private System.Windows.Forms.Label label;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSerial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNameOfBook;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colmasv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colmathe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coltgian;
     }
 }

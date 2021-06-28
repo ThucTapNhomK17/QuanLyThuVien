@@ -199,34 +199,34 @@ namespace Library_Manager
         {
             switch (cbxAnalytics.SelectedIndex)
             {
+                //case 0:
+                //    {
+                //        dgvAnalytics.AutoGenerateColumns = true;
+                //        dgvAnalytics.DataSource = Data.ViewBorrowOverTime();
+
+                //    }
+                //    break;
+                //case 1:
+                //    {
+                //        dgvAnalytics.AutoGenerateColumns = true;
+                //        dgvAnalytics.DataSource = Data.ViewAllBook();
+
+                //    }
+                //    break;
                 case 0:
-                    {
-                        dgvAnalytics.AutoGenerateColumns = true;
-                        dgvAnalytics.DataSource = Data.ViewBorrowOverTime();
-
-                    }
-                    break;
-                case 1:
-                    {
-                        dgvAnalytics.AutoGenerateColumns = true;
-                        dgvAnalytics.DataSource = Data.ViewAllBook();
-
-                    }
-                    break;
-                case 2:
                     {
                         dgvAnalytics.AutoGenerateColumns = true;
                         dgvAnalytics.DataSource = Data.ViewAllStudent();
 
                     }
                     break;
-                case 3:
-                    {
-                        dgvAnalytics.AutoGenerateColumns = true;
-                        dgvAnalytics.DataSource = Data.ViewAllBorrowCard();
+                //case 3:
+                //    {
+                //        dgvAnalytics.AutoGenerateColumns = true;
+                //        dgvAnalytics.DataSource = Data.ViewAllBorrowCard();
 
-                    }
-                    break;
+                //    }
+                //    break;
             }
 
         }

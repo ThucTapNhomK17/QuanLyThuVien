@@ -114,17 +114,17 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(5);
-            this.barDockControlTop.Size = new System.Drawing.Size(1546, 0);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(1132, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 836);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 653);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(5);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1546, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1132, 0);
             // 
             // barDockControlLeft
             // 
@@ -132,17 +132,17 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(5);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 836);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 653);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1546, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(1132, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(5);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 836);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 653);
             // 
             // barLargeButtonItem1
             // 
@@ -204,7 +204,8 @@
             this.chếĐộToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1546, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1132, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -214,20 +215,20 @@
             this.đăngXuấtToolStripMenuItem,
             this.thoátToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
@@ -239,34 +240,34 @@
             this.addAccountToolStripMenuItem,
             this.editAccountToolStripMenuItem});
             this.chếĐộToolStripMenuItem.Name = "chếĐộToolStripMenuItem";
-            this.chếĐộToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.chếĐộToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.chếĐộToolStripMenuItem.Text = "Chế độ";
             // 
             // viewLogToolStripMenuItem
             // 
             this.viewLogToolStripMenuItem.Name = "viewLogToolStripMenuItem";
-            this.viewLogToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            this.viewLogToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.viewLogToolStripMenuItem.Text = "Xem file Log";
             this.viewLogToolStripMenuItem.Click += new System.EventHandler(this.viewLogToolStripMenuItem_Click);
             // 
             // viewAnalyticsToolStripMenuItem
             // 
             this.viewAnalyticsToolStripMenuItem.Name = "viewAnalyticsToolStripMenuItem";
-            this.viewAnalyticsToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            this.viewAnalyticsToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.viewAnalyticsToolStripMenuItem.Text = "Xem thống kê";
             this.viewAnalyticsToolStripMenuItem.Click += new System.EventHandler(this.viewAnalyticsToolStripMenuItem_Click);
             // 
             // addAccountToolStripMenuItem
             // 
             this.addAccountToolStripMenuItem.Name = "addAccountToolStripMenuItem";
-            this.addAccountToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            this.addAccountToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.addAccountToolStripMenuItem.Text = "Thêm tài khoản quản trị";
             this.addAccountToolStripMenuItem.Click += new System.EventHandler(this.addAccountToolStripMenuItem_Click);
             // 
             // editAccountToolStripMenuItem
             // 
             this.editAccountToolStripMenuItem.Name = "editAccountToolStripMenuItem";
-            this.editAccountToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            this.editAccountToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.editAccountToolStripMenuItem.Text = "Sửa tài khoản quản trị";
             this.editAccountToolStripMenuItem.Click += new System.EventHandler(this.editAccountToolStripMenuItem_Click);
             // 
@@ -287,10 +288,10 @@
             this.lblMode,
             this.lblAccount,
             this.lblTimeSys});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 801);
+            this.toolStrip2.Location = new System.Drawing.Point(0, 623);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip2.Size = new System.Drawing.Size(1546, 35);
+            this.toolStrip2.Size = new System.Drawing.Size(1132, 30);
             this.toolStrip2.TabIndex = 36;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -299,7 +300,7 @@
             this.lblMode.Font = new System.Drawing.Font("Times New Roman", 10.25F, System.Drawing.FontStyle.Bold);
             this.lblMode.ForeColor = System.Drawing.Color.Green;
             this.lblMode.Name = "lblMode";
-            this.lblMode.Size = new System.Drawing.Size(54, 32);
+            this.lblMode.Size = new System.Drawing.Size(41, 27);
             this.lblMode.Text = "Mode";
             // 
             // lblAccount
@@ -308,14 +309,14 @@
             this.lblAccount.Font = new System.Drawing.Font("Times New Roman", 10.25F, System.Drawing.FontStyle.Bold);
             this.lblAccount.ForeColor = System.Drawing.Color.Maroon;
             this.lblAccount.Name = "lblAccount";
-            this.lblAccount.Size = new System.Drawing.Size(74, 32);
+            this.lblAccount.Size = new System.Drawing.Size(58, 27);
             this.lblAccount.Text = "Account";
             // 
             // lblTimeSys
             // 
             this.lblTimeSys.Font = new System.Drawing.Font("Times New Roman", 10.25F, System.Drawing.FontStyle.Bold);
             this.lblTimeSys.Name = "lblTimeSys";
-            this.lblTimeSys.Size = new System.Drawing.Size(83, 32);
+            this.lblTimeSys.Size = new System.Drawing.Size(66, 27);
             this.lblTimeSys.Text = "Thời gian";
             // 
             // tsbtnExit
@@ -325,7 +326,7 @@
             this.tsbtnExit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbtnExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnExit.Name = "tsbtnExit";
-            this.tsbtnExit.Size = new System.Drawing.Size(68, 108);
+            this.tsbtnExit.Size = new System.Drawing.Size(68, 93);
             this.tsbtnExit.Text = "Thoát";
             this.tsbtnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbtnExit.Click += new System.EventHandler(this.tsbtnExit_Click);
@@ -334,7 +335,7 @@
             // 
             this.toolStripSeparator5.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 111);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 96);
             // 
             // toolStrip1
             // 
@@ -353,9 +354,9 @@
             this.tsbtnExit,
             this.toolStripSeparator5,
             this.toolStripSeparator6});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1546, 111);
+            this.toolStrip1.Size = new System.Drawing.Size(1132, 96);
             this.toolStrip1.TabIndex = 37;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -365,7 +366,7 @@
             this.btnViewLog.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnViewLog.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnViewLog.Name = "btnViewLog";
-            this.btnViewLog.Size = new System.Drawing.Size(97, 108);
+            this.btnViewLog.Size = new System.Drawing.Size(77, 93);
             this.btnViewLog.Text = "Xem file Log";
             this.btnViewLog.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnViewLog.ToolTipText = "Xem file log";
@@ -374,7 +375,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 111);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 96);
             // 
             // btnViewAnalytics
             // 
@@ -382,7 +383,7 @@
             this.btnViewAnalytics.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnViewAnalytics.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnViewAnalytics.Name = "btnViewAnalytics";
-            this.btnViewAnalytics.Size = new System.Drawing.Size(105, 108);
+            this.btnViewAnalytics.Size = new System.Drawing.Size(85, 93);
             this.btnViewAnalytics.Text = "Xem thống kê";
             this.btnViewAnalytics.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnViewAnalytics.ToolTipText = "Xem thống kê";
@@ -391,12 +392,12 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 111);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 96);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 111);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 96);
             // 
             // btnFixAccount
             // 
@@ -404,7 +405,7 @@
             this.btnFixAccount.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnFixAccount.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnFixAccount.Name = "btnFixAccount";
-            this.btnFixAccount.Size = new System.Drawing.Size(158, 108);
+            this.btnFixAccount.Size = new System.Drawing.Size(126, 93);
             this.btnFixAccount.Text = "Sửa tài khoản quản trị";
             this.btnFixAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnFixAccount.ToolTipText = "Sửa tài khoản quản trị";
@@ -413,7 +414,7 @@
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 111);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 96);
             // 
             // btnReset
             // 
@@ -421,7 +422,7 @@
             this.btnReset.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnReset.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(68, 108);
+            this.btnReset.Size = new System.Drawing.Size(68, 93);
             this.btnReset.Text = "Đặt lại";
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnReset.ToolTipText = "Đặt lại";
@@ -430,7 +431,7 @@
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 111);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 96);
             // 
             // dgvLog
             // 
@@ -440,12 +441,11 @@
             this.dgvLog.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colEvent,
             this.colTime});
-            this.dgvLog.Location = new System.Drawing.Point(0, 139);
-            this.dgvLog.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dgvLog.Location = new System.Drawing.Point(0, 120);
             this.dgvLog.Name = "dgvLog";
             this.dgvLog.ReadOnly = true;
             this.dgvLog.RowHeadersWidth = 51;
-            this.dgvLog.Size = new System.Drawing.Size(1540, 660);
+            this.dgvLog.Size = new System.Drawing.Size(1260, 570);
             this.dgvLog.TabIndex = 42;
             // 
             // colEvent
@@ -468,10 +468,9 @@
             // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(697, 660);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCreate.Location = new System.Drawing.Point(570, 570);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(220, 35);
+            this.btnCreate.Size = new System.Drawing.Size(180, 30);
             this.btnCreate.TabIndex = 5;
             this.btnCreate.Text = "Tạo tài khoản";
             this.btnCreate.UseVisualStyleBackColor = true;
@@ -480,83 +479,75 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(660, 347);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPassword.Location = new System.Drawing.Point(540, 300);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(82, 22);
+            this.lblPassword.Size = new System.Drawing.Size(67, 19);
             this.lblPassword.TabIndex = 50;
             this.lblPassword.Text = "Mật khẩu";
             // 
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(660, 243);
-            this.lblUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUserName.Location = new System.Drawing.Point(540, 210);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(124, 22);
+            this.lblUserName.Size = new System.Drawing.Size(98, 19);
             this.lblUserName.TabIndex = 49;
             this.lblUserName.Text = "Tên đăng nhập";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(660, 382);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtPassword.Location = new System.Drawing.Point(540, 330);
             this.txtPassword.MaxLength = 32;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(292, 30);
+            this.txtPassword.Size = new System.Drawing.Size(240, 26);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.TextChanged += new System.EventHandler(this.VerifyInput_TextChanged);
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(660, 278);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtUserName.Location = new System.Drawing.Point(540, 240);
             this.txtUserName.MaxLength = 32;
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(292, 30);
+            this.txtUserName.Size = new System.Drawing.Size(240, 26);
             this.txtUserName.TabIndex = 1;
             this.txtUserName.TextAlignChanged += new System.EventHandler(this.VerifyInput_TextChanged);
             // 
             // lblReTypePass
             // 
             this.lblReTypePass.AutoSize = true;
-            this.lblReTypePass.Location = new System.Drawing.Point(660, 452);
-            this.lblReTypePass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblReTypePass.Location = new System.Drawing.Point(540, 390);
             this.lblReTypePass.Name = "lblReTypePass";
-            this.lblReTypePass.Size = new System.Drawing.Size(134, 22);
+            this.lblReTypePass.Size = new System.Drawing.Size(104, 19);
             this.lblReTypePass.TabIndex = 53;
             this.lblReTypePass.Text = "Gõ lại mật khẩu";
             // 
             // txtReTypePass
             // 
-            this.txtReTypePass.Location = new System.Drawing.Point(660, 486);
-            this.txtReTypePass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtReTypePass.Location = new System.Drawing.Point(540, 420);
             this.txtReTypePass.MaxLength = 32;
             this.txtReTypePass.Name = "txtReTypePass";
             this.txtReTypePass.PasswordChar = '*';
-            this.txtReTypePass.Size = new System.Drawing.Size(292, 30);
+            this.txtReTypePass.Size = new System.Drawing.Size(240, 26);
             this.txtReTypePass.TabIndex = 3;
             this.txtReTypePass.TextChanged += new System.EventHandler(this.VerifyInput_TextChanged);
             // 
             // lblSupperAdmin
             // 
             this.lblSupperAdmin.AutoSize = true;
-            this.lblSupperAdmin.Location = new System.Drawing.Point(660, 556);
-            this.lblSupperAdmin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSupperAdmin.Location = new System.Drawing.Point(540, 480);
             this.lblSupperAdmin.Name = "lblSupperAdmin";
-            this.lblSupperAdmin.Size = new System.Drawing.Size(272, 22);
+            this.lblSupperAdmin.Size = new System.Drawing.Size(214, 19);
             this.lblSupperAdmin.TabIndex = 55;
             this.lblSupperAdmin.Text = "Mật khẩu tài khoản Supper admin";
             // 
             // txtSuperAdminPass
             // 
-            this.txtSuperAdminPass.Location = new System.Drawing.Point(660, 591);
-            this.txtSuperAdminPass.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtSuperAdminPass.Location = new System.Drawing.Point(540, 510);
             this.txtSuperAdminPass.MaxLength = 32;
             this.txtSuperAdminPass.Name = "txtSuperAdminPass";
             this.txtSuperAdminPass.PasswordChar = '*';
-            this.txtSuperAdminPass.Size = new System.Drawing.Size(292, 30);
+            this.txtSuperAdminPass.Size = new System.Drawing.Size(240, 26);
             this.txtSuperAdminPass.TabIndex = 4;
             this.txtSuperAdminPass.TextChanged += new System.EventHandler(this.VerifyInput_TextChanged);
             // 
@@ -566,14 +557,10 @@
             this.cbxAnalytics.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxAnalytics.FormattingEnabled = true;
             this.cbxAnalytics.Items.AddRange(new object[] {
-            "Xem các thẻ mượn sách quá hạn",
-            "Xem số lượng sách trong kho",
-            "Xem toàn bộ sinh viên",
-            "Xem tất cả các phiếu mượn sách"});
-            this.cbxAnalytics.Location = new System.Drawing.Point(37, 174);
-            this.cbxAnalytics.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            "Xem toàn bộ sinh viên"});
+            this.cbxAnalytics.Location = new System.Drawing.Point(30, 150);
             this.cbxAnalytics.Name = "cbxAnalytics";
-            this.cbxAnalytics.Size = new System.Drawing.Size(366, 30);
+            this.cbxAnalytics.Size = new System.Drawing.Size(300, 27);
             this.cbxAnalytics.TabIndex = 60;
             this.cbxAnalytics.SelectedIndexChanged += new System.EventHandler(this.cbxAnalytics_SelectedIndexChanged);
             // 
@@ -584,22 +571,21 @@
             this.dgvAnalytics.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAnalytics.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvAnalytics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAnalytics.Location = new System.Drawing.Point(473, 174);
-            this.dgvAnalytics.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dgvAnalytics.Location = new System.Drawing.Point(387, 150);
             this.dgvAnalytics.Name = "dgvAnalytics";
             this.dgvAnalytics.ReadOnly = true;
             this.dgvAnalytics.RowHeadersWidth = 51;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAnalytics.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAnalytics.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAnalytics.Size = new System.Drawing.Size(1467, 591);
+            this.dgvAnalytics.Size = new System.Drawing.Size(1200, 510);
             this.dgvAnalytics.TabIndex = 65;
             // 
             // DataForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1546, 836);
+            this.ClientSize = new System.Drawing.Size(1132, 653);
             this.Controls.Add(this.dgvAnalytics);
             this.Controls.Add(this.cbxAnalytics);
             this.Controls.Add(this.lblSupperAdmin);
@@ -622,7 +608,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("DataForm.IconOptions.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "DataForm";
             this.Text = "Thao tác với dữ liệu hệ thống";
